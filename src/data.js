@@ -1,20 +1,20 @@
 export const navOpts = [
   [{
   name: "all",
-  link: "/products/all"
+  link: "/all"
   },{
   name: "suits",
-  link: "/products/pottery"
+  link: "/suits"
   },{
   name: "shoes",
-  link: "/products/knives"
+  link: "/shoes"
   }],
   [{
   name: "boss",
-  link: "/artisans/Da-Vito-Degal"
+  link: "/boss"
   },{
   name: "polo",
-  link: "/artisans/Lucy-Moon"
+  link: "/polo"
   }]
 ]
 

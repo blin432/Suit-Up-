@@ -45,3 +45,17 @@ body{
   cursor: pointer;
   
 }
+
+.jumbo{
+  background-image: url('./dexlon.jpg');
+  height:100vh;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.wordsContainer{
+  padding-top:75px;
+}
+
+
+
