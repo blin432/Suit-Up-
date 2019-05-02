@@ -1,46 +1,39 @@
 import React, { Component } from 'react';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import logo from '../logo.svg'
-import styled from 'styled-components';
-import {ButtonContainer} from './Button';
+import {navOpts , navOptsLoggedIn, navHeadings} from '../data';
 
-export default class Navbar extends Component{
-    render(){
-        return(
-            <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
-            {/*
-            https://www.iconfinder.com/icons/1243689/call_phone_icon
-            Creative Commons (Attribution 3.0 Unported);
-            https://www.iconfinder.com/Makoto_msk 
-            */}
-            <Link to="/">
-                <img src={logo} alt="store" className="navbar-brand" />
-            </Link>
-            <ul className="navbar-nav align-items-center">
-                <li className="nav-item ml-5">
-                    <Link to="/" className="nav-link">
-                        Products
-                    </Link>
-                </li>
-            </ul>
-            <Link to="/cart" className="ml-auto">
-            <ButtonContainer>
-                <span className="mx">
-                    <i className="fas fa-cart-plus"></i>
-                </span>
-            </ButtonContainer>
-            </Link>
-            </NavWrapper>
-        )
-    }
-}
+class NavBar extends Component {
 
-const NavWrapper = styled.nav`
-background: var(--mainBlue);
-.nav-link{
-    color: var(--mainWhite)!important;
-    font-size:1.3rem;
-    text-transform: capitalize;
-}
-`
+  render() {
 
+    let optsToDisplay =  navOpts
+
+    return(
+    <React.Fragment>
+        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+          <Navbar.Brand className="mr-5" ><Link to="/" style={{color:'white',textDecoration: 'none'}}>Suit Up for Fashion</Link></Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ml-auto">
+                  {optsToDisplay.map((section,i) =>
+                    <Nav key={i} className="mr-5">
+                      <NavDropdown title={navHeadings[i]} id="collasible-nav-dropdown">
+                        {section.map((item,j) => 
+                        <Link className="m-3" 
+                          key={j}
+                          to={`${item.link}`} 
+                          style={{color:'black',textTransform: "capitalize"}}>
+                          {item.name.replace("-"," ").replace("-"," ")}<br></br>
+                        </Link>)}
+                    </NavDropdown>
+                  </Nav>)}
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
+          </React.Fragment>
+          );
+        }
+      }
+
+export default NavBar;

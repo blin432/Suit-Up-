@@ -8,6 +8,7 @@ import Details from './components/Details';
 import Default from './components/Default';
 import Cart from './components/Cart/';
 import Modal from './components/Modal';
+import Sidebar from './components/Sidebar';
 
 
 class App extends Component {
@@ -28,3 +29,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+

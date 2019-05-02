@@ -90,9 +90,12 @@ const ProductWrapper = styled.div`
 .img-container{
     position:relative;
     overflow:hidden;
+    
 }
 .card-img-top{
     transition: all 1s linear;
+    height:250px;
+    width:100%;
 }
 .img-container:hover .card-img-top{
     transform(1.2);
