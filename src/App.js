@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Default from './components/Default';
-import Cart from './components/Cart/';
 import Modal from './components/Modal';
 import Homepage from './components/Homepage';
 
@@ -20,7 +19,6 @@ class App extends Component {
         <Route exact path="/" component={Homepage}/>
         <Route path="/all" component={ProductList}/>
         <Route path="/details" component={Details}/>
-        <Route path="/cart" component={Cart}/>
         <Route component={Default}/>
       </Switch>
       <Modal />
