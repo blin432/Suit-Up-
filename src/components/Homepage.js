@@ -18,7 +18,7 @@ class Homepage extends Component{
                     <p>
                     Don't look like this bum.
                     </p>
-                    <p style={{fontSize:'32px'}}>Show Now<Link to="/all">
+                    <p style={{fontSize:'32px'}}>Shop Now<Link to="/all">
                   <span style={{marginLeft:'20px'}}><img  style ={{height:'75px'}} src={arrow}></img></span>
                   </Link></p>
                 </Container>
